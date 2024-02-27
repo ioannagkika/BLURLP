@@ -26,15 +26,16 @@ The dataset used for training is a subset of the [CCPD dataset](https://github.c
 
 For inference, run following command. 
 
-```bash
-python main.py
-```
 Make sure you have added the proper paths in the options.yaml.
 * weights: the path of the weights.pt file
 * input_path: the path of the folder where the images and/or videos you want to test are
 * output_path: the path where you want to save the output of the model
 * save: if you want to save the output of the model keep it to True, else change it to False.
 * show: if you want to preview the results change it to True, else keep it to False.
+
+```bash
+python main.py
+```
 
 ## Example
 
