@@ -1,6 +1,6 @@
 # Licence plate blurring using YOLOv8_obb 
 
-This is my WiP project for licence plate detecting and blurring in images and videos using YOLOv8 oriented bounding boxes. This project is just a hobby project and is not intended for comercial use.
+This is my WiP project for licence plate detecting and blurring in images and videos using YOLOv8 oriented bounding boxes (obb). This project is just a hobby project and is not intended for comercial use.
 
 ## Environment
 
