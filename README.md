@@ -18,7 +18,8 @@ pip install -r requirements.txt
 
 ## Pretrained Weights & Dataset
 
-Download the weights of the pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1HHt-oDnS-wRuDBi4tJiqLaAwtfUqM-F8?usp=sharing) and place into the folder weights.
+You can download the weights of the pre-trained model from [Google Drive](https://drive.google.com/drive/folders/1HHt-oDnS-wRuDBi4tJiqLaAwtfUqM-F8?usp=sharing) and place into the folder weights.
+
 The dataset used for training is a subset of the [CCPD dataset](https://github.com/detectRecog/CCPD).
 
 ## Inference
@@ -38,4 +39,9 @@ Make sure you have added the proper paths in the options.yaml.
 ## Example
 
 
+Note: The output video will be in .avi format. If you want to convert it to .mp4 run the following command on terminal:
+
+```bash
+ffmpeg -i example.avi example.mp4
+```
 
