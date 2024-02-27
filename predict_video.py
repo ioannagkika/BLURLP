@@ -6,11 +6,11 @@ import yaml
 import glob
 import pathlib
 
-with open('paths.yaml', 'r') as file:
-    paths = yaml.safe_load(file)
+with open('options.yaml', 'r') as file:
+    opts = yaml.safe_load(file)
 
 # Load a model
-model = YOLO(paths['model_path'])  # custom YOLOv8n obb model
+model = YOLO(opts['model_path'])  # custom YOLOv8n obb model
 
 
 def blur_inside_obbs(frame, obb_vertices_list):
@@ -126,6 +126,6 @@ def blur_in_video(video_in, video_out, save_video=True, show= False):
     
 if __name__=='__main__':
     video_ext = [".asf", ".avi", ".gif", ".m4v", ".mkv", ".mov", ".mp4", ".mpeg", ".mpg", ".ts", ".wmv", ".webm"]
-    videos = [f for f_ in [glob.glob(paths['input_video_path']+"*"+e) for e in video_ext] for f in f_]
+    videos = [f for f_ in [glob.glob(opts['input_path']+"*"+e) for e in video_ext] for f in f_]
     for video in videos:
-        blur_in_video(video_in = video, video_out = paths['output_video_path'] + pathlib.Path(video).stem +".avi", show = False, save_video = True)
+        blur_in_video(video_in = video, video_out = opts['output_path'] + pathlib.Path(video).stem +".avi", show = opts['show'], save_video = opts['save'])

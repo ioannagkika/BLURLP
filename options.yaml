@@ -1,0 +1,5 @@
+model_path: './weights/best.pt'
+input_path: './input/'
+output_path: './output/'
+save: True
+show: False

@@ -5,11 +5,11 @@ import numpy as np
 import glob
 import pathlib
 
-with open('paths.yaml', 'r') as file:
-    paths = yaml.safe_load(file)
+with open('options.yaml', 'r') as file:
+    opts = yaml.safe_load(file)
 
 # Load the object detection model
-model = YOLO(paths['model_path'])  # custom YOLOv8n model
+model = YOLO(opts['model_path'])  # custom YOLOv8n model
 
 # Function to blur pixels inside the obb
 def blur_inside_obb(image, obb_vertices_list):
@@ -74,6 +74,6 @@ def blur_in_image(image_in, image_out, save_image = True, show = False):
         
 if __name__== '__main__':
     image_ext = [".bmp", ".dng", ".jpeg", ".jpg", ".mpo", ".png", "tif", "tiff", ".webp", ".pfm"]
-    images = [f for f_ in [glob.glob(paths['input_image_path']+"*"+e) for e in image_ext] for f in f_]
+    images = [f for f_ in [glob.glob(opts['input_path']+"*"+e) for e in image_ext] for f in f_]
     for image in images:
-       blur_in_image(image_in = image, image_out = paths['output_image_path'] + pathlib.Path(image).stem +".png",show = False, save_image=True)
+       blur_in_image(image_in = image, image_out = opts['output_path'] + pathlib.Path(image).stem +".png",show = opts['show'], save_image=opts['save'])
