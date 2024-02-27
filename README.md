@@ -38,7 +38,7 @@ Make sure you have added the proper paths in the options.yaml.
 
 ## Example
 
-[Watch the video](https://github.com/ioannagkika/licence_plate_blurring_yolov8_obb/blob/main/output/example.mp4)
+https://github.com/ioannagkika/licence_plate_blurring_yolov8_obb/assets/62180847/9a780afa-56fb-41eb-9e97-d777bd916a10
 
 Note: The output video will be in .avi format. If you want to convert it to .mp4 run the following command on terminal:
 
